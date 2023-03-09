@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gerador de Senhas</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Gerador de Senhas</h1>
+		<form>
+			<label for="senha">Sua senha é:</label>
+			<input type="text" id="senha" readonly>
+			<button type="button" onclick="gerarSenha()">Gerar Senha</button>
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>Senha</th>
+				</tr>
+			</thead>
+			<tbody id="senhas-geradas">
+			</tbody>
+		</table>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

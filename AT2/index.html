@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Controle de Tamanho de Fonte</title>
+    <style>
+      /* Estilo da div */
+      .minha-div {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        width: 500px;
+        height: 200px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      
+      /* Estilo do range */
+      #range-fonte {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="minha-div">TAMANHO DA DIV</div>
+    <input type="range" id="range-fonte" min="10" max="40" value="16">
+    <script>
+      // Seleciona a div
+      const div = document.querySelector('.minha-div');
+      
+      // Seleciona o range
+      const range = document.querySelector('#range-fonte');
+      
+      // Adiciona um ouvinte de evento de mudança no range
+      range.addEventListener('input', () => {
+        // Atualiza o tamanho da fonte da div com o valor do range
+        div.style.fontSize = `${range.value}px`;
+      });
+    </script>
+  </body>
+</html>
